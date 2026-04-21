@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cassette Culture</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+        
+        
+        <meta charset=”utf-8”>
+        <link rel="icon" href="images/cassette_culture_logo.png" type="image/x-icon">
+
+        <!--FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+        
+
+        <!---SEARCH BAR-->
+        <div class="header">
+            <div class="search-bar">
+                <span class="search-icon material-symbols-outlined"> search </span>
+                <input class="search-input"type="search" placeholder="Search"> 
+            </div>
+        </div>
+
+        <!---NAVIGATION BAR-->
+        <div class = "side-nav">
+            <div class = "sidenav-items">
+                
+                <a href ="index.html">
+                    <button class = "sidenav-item" link ="index.html">
+                        <img src="images/home_icon.png" alt="home icon" width="30px">
+                        <p id="home-tab">Home</p>
+                    </button>
+                </a>
+
+                <a href ="browse.html">
+                    <button class = "sidenav-item">
+                        <img src="images/browse_icon.png" alt="images icon" width="30px">
+                        <p id="browse-tab">Browse</p>
+                    </button>
+                </a>
+
+                <a href ="friends.html" >
+                    <button class = "sidenav-item">
+                        <img src="images/friends_icon.png" alt="friends icon" width="30px">
+                        <p id="friends-tab">Friends</p>
+                    </button>
+                </a>
+
+                <a href ="profile.html" >
+                    <button class = "sidenav-item-current">
+                        <img src="images/profile_icon.png" alt="browse icon" width="30px">
+                        <p id="profile-tab">Profile</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </head>
+
+    <body>
+
+        <!---FEED-->
+        <div class="profile">
+            <div class="user-profile">
+                <div class="profile-banner">
+                    <img src="images/profile_user_banner.png" alt="Profile Banner">
+                </div>
+                <div class="profile-icon"> 
+                    <img src="images/Profile_picture_user.png" width="150px" alt="Profile Icon">
+                </div>
+                <div class="profile-names">
+                    <div class="name-block">
+                        <h2>REN</h2>
+                        <p>@ren2634</p>
+                    </div>
+                    <button class="edit-profile">edit profile</button>
+                </div>
+                <hr>
+                <div class="other-user-info">
+                    <div class="user-type">
+                        <p>Listener</p>
+                    </div>
+                    <div class="user-bio">
+                        <p>la 🎶 la 🎶 la 🎶 <br>This is my bio, I love to rock and roll! </p>
+                    </div>
+                </div>
+                
+                <div class="profile-tabs">
+                    <button class="tab active" onclick="showTab('overview')">overview</button>
+                    <button class="tab" onclick="showTab('activity')">activity</button>
+                    <button class="tab" onclick="showTab('reposts')">reposts (3)</button>
+                    <button class="tab" onclick="showTab('friends')">friends (12)</button>
+                </div>
+
+                <div class ="user-tab-contents">
+                    <div id="overview" class="tab-content">
+                        <div class = "top-picks">
+                            <h3>Username's Top Picks</h3>
+                            <ul class = "top-picks-list">
+                                <li class = "picks">
+                                    <div class="cover-container">
+                                        <img id="album" src="images/default_album.png" alt="default album cover" width="130px">
+                                    </div>
+                                    <div class="audio">
+                                        <audio id="hoveraudio">
+                                            <source src="albums/No One Waved Goodbye/So Much Water.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </li>
+                                <li class = "picks">
+                                    <div class="cover-container">
+                                        <img id="album" src="images/Harsh_Intention_cover1.png" alt="harsh intention album cover" width="130px">
+                                    </div>
+                                    <div class="audio">
+                                        <audio id="hoveraudio">
+                                            <source src="albums/Harsh Intention/Glare.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </li>
+                                <li class = "picks">
+                                    <div class="cover-container">
+                                        <img id="album" src="images/Harsh_Intention_cover2.png" alt="default album cover" width="130px">
+                                    </div>
+                                    <div class="audio">
+                                        <audio id="hoveraudio">
+                                            <source src="albums/Harsh Intention/an angel strikes.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </li>
+                                <li class = "picks">
+                                    <div class="cover-container">
+                                        <img id="album" src="images/Purple_Posse_cover2.png" alt="purple posse album cover" width="130px">
+                                    </div>
+                                    <div class="audio">
+                                        <audio id="hoveraudio">
+                                            <source src="albums/Purple Posse/Drugz.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </li> 
+                                <li class = "picks">
+                                    <div class="cover-container">
+                                        <img id="album" src="images/Purple_Posse_cover1.png" alt="default album cover" width="130px">
+                                    </div>
+                                    <div class="audio">
+                                        <audio id="hoveraudio">
+                                            <source src="albums/Purple Posse/Caramel.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </li>
+                            </ul>
+                            <script>
+                                document.querySelectorAll('.picks').forEach(story => {
+                                    const albumImage = story.querySelector('#album');
+                                    const audio = story.querySelector('audio');
+
+                                    albumImage.addEventListener('click', () => {
+                                    if (audio.paused) {
+                                        audio.play();
+                                    } else {
+                                        audio.pause();
+                                    }
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <div id="activity" class="tab-content hidden">
+                        <div class="small-repost-samples">
+                            <div class="small-repost-sample-template">
+                                <div class = "repost-content">
+                                    <div class = "album_cover">
+                                        <a href="albums/NoOneWavedGoodbye.html">
+                                            <img src="images/default_album.png" alt="default album cover" width="105px">
+                                        </a>
+                                    </div>
+                                    <div class = "song-info">
+                                        <h3>Ghost Channels</h3> 
+                                        <a href="Tacoma_Radar.html">by Tacoma Radar</a>
+                                        <audio controls src="albums/No One Waved Goodbye/Ghost Channels.mp3">Your browser does not support the audio element.</audio>
+                                    </div>
+                                </div>   
+                            </div>  
+                            <div class="small-repost-sample-template">
+                                <div class = "repost-content">
+                                    <div class = "album_cover">
+                                        <a href="albums/NoOneWavedGoodbye.html">
+                                            <img src="images/default_album.png" alt="default album cover" width="105px">
+                                        </a>
+                                    </div>
+                                    <div class = "song-info">
+                                        <h3>So Much Water</h3> 
+                                        <a href="Tacoma_Radar.html">by Tacoma Radar</a>
+                                        <br>
+                                        <audio controls src="albums/No One Waved Goodbye/So Much Water.mp3"></audio>
+                                    </div>
+                                </div>   
+                            </div>       
+                        </div>    
+                        <div class="small-repost-samples">
+                            <div class="small-repost-sample-template">
+                                <div class = "repost-content">
+                                    <div class = "album_cover">
+                                        <a href="albums/NoOneWavedGoodbye.html">
+                                            <img src="images/default_album.png" alt="default album cover" width="105px">
+                                        </a>
+                                    </div>
+                                    <div class = "song-info">
+                                        <h3>Pilot House</h3> 
+                                        <a href="Tacoma_Radar.html">by Tacoma Radar</a>
+                                        <audio controls src="albums/No One Waved Goodbye/Pilot House.mp3">Your browser does not support the audio element.</audio>
+                                    </div>
+                                </div>   
+                            </div>  
+                            <div class="small-repost-sample-template">
+                                <div class = "repost-content">
+                                    <div class = "album_cover">
+                                        <a href="albums/NoOneWavedGoodbye.html">
+                                            <img src="images/Purple_Posse_cover1.png" alt="purple posse album cover" width="105px">
+                                        </a>
+                                    </div>
+                                    <div class = "song-info">
+                                        <h3>Caramel</h3> 
+                                        <a href="Tacoma_Radar.html">by Purple Posse</a>
+                                        <br>
+                                        <audio controls src="albums/Purple Posse/Caramel.mp3"></audio>
+                                    </div>
+                                </div>   
+                            </div>       
+                        </div>    
+                        <div class="small-repost-samples">
+                            <div class="small-repost-sample-template">
+                                <div class = "repost-content">
+                                    <div class = "album_cover">
+                                        <a href="albums/NoOneWavedGoodbye.html">
+                                            <img src="images/Purple_Posse_cover1.png" alt="purple posse album cover" width="105px">
+                                        </a>
+                                    </div>
+                                    <div class = "song-info">
+                                        <h3>Degreez</h3> 
+                                        <a href="Tacoma_Radar.html">by Purple Posse</a>
+                                        <audio controls src="albums/Purple Posse/Degreez.mp3">Your browser does not support the audio element.</audio>
+                                    </div>
+                                </div>   
+                            </div>  
+                            <div class="small-repost-sample-template">
+                                <div class = "repost-content">
+                                    <div class = "album_cover">
+                                        <a href="albums/NoOneWavedGoodbye.html">
+                                            <img src="images/Purple_Posse_cover3.png" alt="default album cover" width="105px">
+                                        </a>
+                                    </div>
+                                    <div class = "song-info">
+                                        <h3>Pushin' Keys</h3> 
+                                        <a href="Tacoma_Radar.html">by Purple Posse</a>
+                                        <br>
+                                        <audio controls src="albums/Purple Posse/Pushin' Keys.mp3"></audio>
+                                    </div>
+                                </div>   
+                            </div>       
+                        </div>    
+                        <div class="small-repost-samples">
+                            <div class="small-repost-sample-template">
+                                <div class = "repost-content">
+                                    <div class = "album_cover">
+                                        <a href="albums/NoOneWavedGoodbye.html">
+                                            <img src="images/Harsh_Intention_cover4.png" alt="default album cover" width="105px">
+                                        </a>
+                                    </div>
+                                    <div class = "song-info">
+                                        <h3>Truth</h3> 
+                                        <a href="Tacoma_Radar.html">by Harsh Intention</a>
+                                        <audio controls src="albums/Harsh Intention/Truth.mp3">Your browser does not support the audio element.</audio>
+                                    </div>
+                                </div>   
+                            </div>  
+                            <div class="small-repost-sample-template">
+                                <div class = "repost-content">
+                                    <div class = "album_cover">
+                                        <a href="albums/NoOneWavedGoodbye.html">
+                                            <img src="images/Harsh_Intention_cover1.png" alt="default album cover" width="105px">
+                                        </a>
+                                    </div>
+                                    <div class = "song-info">
+                                        <h3>Glare</h3> 
+                                        <a href="Tacoma_Radar.html">by Harsh Intention</a>
+                                        <br>
+                                        <audio controls src="albums/Harsh Intention/Glare.mp3"></audio>
+                                    </div>
+                                </div>   
+                            </div>       
+                        </div>    
+                    </div>
+                    <div id="reposts" class="tab-content hidden">
+                        <div class="repost-sample">
+                            <br>
+                            <div class = "repost-content">
+                                <div class = "album_cover">
+                                    <a href="albums/NoOneWavedGoodbye.html">
+                                        <img src="images/Harsh_Intention_cover1.png" alt="default album cover" width="180px">
+                                    </a>
+                                </div>
+                                <div class = "song-info">
+                                    <h3>Glare</h3>
+                                    <a href="Tacoma_Radar.html">by Harsh Intentions</a>
+                                    <br>
+                                    <audio controls src="albums/Harsh Intention/Glare.mp3"></audio>
+                                    <br>
+                                    <comment>0:50 — "beautiful.."</comment>
+                                    <p>1 hour ago</p>
+                                </div>
+                            </div>          
+                        </div>        
+                        <div class="repost-sample">
+                            <br>
+                            <div class = "repost-content">
+                                <div class = "album_cover">
+                                    <a href="albums/NoOneWavedGoodbye.html">
+                                        <img src="images/default_album.png" alt="default album cover" width="180px">
+                                    </a>
+                                </div>
+                                <div class = "song-info">
+                                    <h3>Take Your Time</h3>
+                                    <a href="Tacoma_Radar.html">by Tacoma Radar</a>
+                                    <br>
+                                    <audio controls src="albums/No One Waved Goodbye/Take Your Time.mp3"></audio>
+                                    <br>
+                                    <comment>0:44 — "I love her voice, so comforting"</comment>
+                                    <p>3 hours ago</p>
+                                </div>
+                            </div>          
+                        </div>        
+                        <div class="repost-sample">
+                            <br>
+                            <div class = "repost-content">
+                                <div class = "album_cover">
+                                    <a href="albums/NoOneWavedGoodbye.html">
+                                        <img src="images/Purple_Posse_cover1.png" alt="default album cover" width="180px">
+                                    </a>
+                                </div>
+                                <div class = "song-info">
+                                    <h3>Degreez</h3>
+                                    <a href="Tacoma_Radar.html">by Purple Posse</a>
+                                    <br>
+                                    <audio controls src="albums/Purple Posse/Degreez.mp3"></audio>
+                                    <br>
+                                    <comment>2:01 — "hell yeah!"</comment>
+                                    <p>7 hours ago</p>
+                                </div>
+                            </div>          
+                        </div>        
+                    </div>
+                    <div id="friends" class="tab-content hidden">
+                        <div class = "friends">
+                            <h2>Currently Online</h2>
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture10.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>Copi2897</h3>
+                                </div>
+                            </div>
+                
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture11.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>Noura's troll</h3>
+                                </div>
+                            </div>
+                
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture12.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>Punkasaurus</h3>
+                                </div>
+                            </div>
+
+                            <h2>Offline</h2>
+
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture1.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>SlimVIIbes</h3>
+                                </div>
+                            </div>
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture2.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>Aterna05</h3>
+                                </div>
+                            </div>
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture3.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>AyeAyeBal</h3>
+                                </div>
+                            </div>
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture4.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>Patron404</h3>
+                                </div>
+                            </div>
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture5.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>unfazed</h3>
+                                </div>
+                            </div>
+                                        <div class = "user-friend">  
+                                <img src="images/profile_picture6.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>Re35n</h3>
+                                </div>
+                            </div>
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture7.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>4e</h3>
+                                </div>
+                            </div>
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture8.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>Honeybee!!</h3>
+                                </div>
+                            </div>
+
+                            <div class = "user-friend">  
+                                <img src="images/profile_picture9.jpg" width ="40px" height ="40px">
+                                <div class="user-friend-names">
+                                    <h3>Kenkipi</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>   
+                    function showTab(tabId) {
+                        // hide 
+                        const contents = document.querySelectorAll('.tab-content');
+                        contents.forEach(content => content.classList.add('hidden'));
+
+                        // Remove 'active' class from all tabs
+                        const tabs = document.querySelectorAll('.profile-tabs .tab');
+                        tabs.forEach(tab => tab.classList.remove('active'));
+
+                        // Show  selected tab's content
+                        document.getElementById(tabId).classList.remove('hidden');
+
+                        // Add 'active' class to the clicked tab
+                        const clickedTab = Array.from(tabs).find(tab =>
+                        tab.textContent.toLowerCase().includes(tabId)
+                        );
+                        if (clickedTab) clickedTab.classList.add('active');
+                    }
+                </script>    
+            </div>
+        </div>
+
+
+        <!---FRIENDS LIST-->
+        <div class = "friendslist">
+
+            <h2>Currently Online</h2>
+            <div class = "friend00">  
+                <img src="images/profile_picture10.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>Copi2897</h3>
+                    <p>Listening to Provoker</p>
+                </div>
+            </div>
+  
+            <div class = "friend00">  
+                <img src="images/profile_picture11.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>Noura's troll</h3>
+                    <p>Listening to Shy Burial</p>
+                </div>
+            </div>
+ 
+            <div class = "friend00">  
+                <img src="images/profile_picture12.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>Punkasaurus</h3>
+                    <p>Listening to Harsh Intention</p>
+                </div>
+            </div>
+
+            <h2>Offline</h2>
+
+
+            <div class = "friend00">  
+                <img src="images/profile_picture1.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>SlimVIIbes</h3>
+                    <p>Listened to MOSSS</p>
+                </div>
+            </div>
+            <div class = "friend00">  
+                <img src="images/profile_picture2.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>Aterna05</h3>
+                    <p>Listened to admiinn</p>
+                </div>
+            </div>
+            <div class = "friend00">  
+                <img src="images/profile_picture3.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>AyeAyeBal</h3>
+                    <p>Listened to Lestmor</p>
+                </div>
+            </div>
+            <div class = "friend00">  
+                <img src="images/profile_picture4.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>Patron404</h3>
+                    <p>Listened to Mall Grab</p>
+                </div>
+            </div>
+            <div class = "friend00">  
+                <img src="images/profile_picture5.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>unfazed</h3>
+                    <p>Listened to $undown</p>
+                </div>
+            </div>
+                        <div class = "friend00">  
+                <img src="images/profile_picture6.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>Re35n</h3>
+                    <p>Listened to Tphunk</p>
+                </div>
+            </div>
+            <div class = "friend00">  
+                <img src="images/profile_picture7.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>4e</h3>
+                    <p>Listened to Valentino Strykolo</p>
+                </div>
+            </div>
+            <div class = "friend00">  
+                <img src="images/profile_picture8.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>Honeybee!!</h3>
+                    <p>Listened to Park Hanoi</p>
+                </div>
+            </div>
+
+            <div class = "friend00">  
+                <img src="images/profile_picture9.jpg" width ="40px" height ="40px">
+                <div text-container>
+                    <h3>Kenkipi</h3>
+                    <p>Listened to Pastel Ghost</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
