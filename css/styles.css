@@ -98,7 +98,7 @@
 .sidenav-item-current {
   display: flex;
   align-items: center; /* Center items vertically */
-  background-color: #c7aca9;
+  background-color: #cccccc;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
